@@ -1,10 +1,15 @@
 const { ApolloServer } = require('apollo-server')
+const { mergeTypeDefs } = require('graphql-tools-merge-typedefs')
+
 const userSchema = require('./user/schema/user.graphql')
 const userResolvers = require('./user/resolvers/userResolvers')
 const UsersAPI = require('./user/datasource/user')
 
-const typeDefs = [userSchema]
-const resolvers = [userResolvers]
+const turmaSchema = require('./turma/schema/turma.graphql')
+const turmaResolvers = require('./turma/resolvers/turmaResolvers')
+
+const typeDefs = mergeTypeDefs([userSchema, turmaSchema])
+const resolvers = [userResolvers, turmaResolvers]
 
 const server = new ApolloServer( { 
   typeDefs,

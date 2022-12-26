@@ -1,22 +1,21 @@
 const { gql } = require('apollo-server')
 
 const turmaSchema = gql `
-scalar DateTime
 
-type Turma {
+  type Turma {
     id: ID!
     descricao: String!
     horario:String
     vagas: Int
     inicio: DateTime
     docente: User!
-    createdAt: DateTime
-}
+    createdAt: DateTime!
+  }
 
-type Query{
+  type Query {
     turmas: [Turma]
-    turma: (id: ID!): Turma
-}
+    turma (id: ID!): Turma
+  }
 
 `
 
