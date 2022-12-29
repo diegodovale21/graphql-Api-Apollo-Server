@@ -27,3 +27,4 @@ VALUES
    (1, 1, "confirmado"),
    (2, 2, "confirmado"),
    (3, 3, "cancelado");
+   
