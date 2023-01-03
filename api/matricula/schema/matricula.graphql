@@ -1,0 +1,13 @@
+const { gql } = require('apollo-server')
+
+const matriculaSchema  = `
+  type Matricula {
+    id: ID!
+    estudante: User!
+    turma: Turma!
+    createdAt: DateTime!
+    status: String!
+  }
+
+`
+module.exports = matriculaSchema
