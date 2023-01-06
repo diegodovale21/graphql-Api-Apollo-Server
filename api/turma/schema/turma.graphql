@@ -18,5 +18,19 @@ const turmaSchema = gql `
     turma (id: ID!): Turma
   }
 
+  type Mutation {
+    incluiTurma(turma: TurmaInput): Turma!
+    atualizaTurma(id: ID!, turma: TurmaInput): Turma!
+    deletaTurma(id: ID!): RespostaPadrao
+  }
+
+  interface Resposta {
+    mensagem: String!
+  }
+
+  type RespostaPadrao implements Resposta {
+    mensagem: String!
+  }
+
 `
 module.exports = turmaSchema
