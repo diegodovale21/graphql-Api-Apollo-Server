@@ -10,7 +10,7 @@ const matriculaSchema  = `
   }
 
   type Mutation {
-    matricularEstudante(estudante: ID!, turma: ID!): RespostaPadrao!
+    matriculaEstudante(estudante: ID!, turma: ID!): RespostaPadrao!
   }
 
 `
