@@ -13,9 +13,17 @@ const turmaSchema = gql `
     matriculas: [Matricula]
   }
 
+  input TurmaInput {
+    descricao: String
+    horario: String
+    vagas: Int
+    inicio: DateTime
+    docente_id: Int
+  }
+
   type Query {
     turmas: [Turma]
-    turma (id: ID!): Turma
+    turma(id: ID!): Turma
   }
 
   type Mutation {

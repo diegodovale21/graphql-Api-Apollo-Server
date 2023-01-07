@@ -1,6 +1,6 @@
 const matriculaSchema = require('./schema/matricula.graphql')
-const matriculaResolvers = require('./resolvers/turmaResolvers')
-const MatriculasAPI = require('./datasource/turma')
+const matriculaResolvers = require('./resolvers/matriculaResolvers')
+const MatriculasAPI = require('./datasource/matricula')
 
 module.exports = {
   matriculaSchema,
