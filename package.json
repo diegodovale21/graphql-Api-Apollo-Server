@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e js,json,graphql ./api/index.js",
+    "start": "DEBUG=knex:query nodemon -e js,json,graphql ./api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npx json-server --watch api/data/dados.json"
   },
@@ -23,6 +23,7 @@
     "@graphql-tools/merge": "^8.3.14",
     "apollo-datasource-rest": "^0.9.4",
     "apollo-server": "^2.17.0",
+    "dataloader": "^2.1.0",
     "datasource-sql": "^2.0.1",
     "graphql": "^15.3.0",
     "graphql-tools": "^8.3.14",
