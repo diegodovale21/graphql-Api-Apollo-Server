@@ -11,6 +11,8 @@ const matriculaSchema  = `
 
   type Mutation {
     matriculaEstudante(estudante: ID!, turma: ID!): RespostaPadrao!
+    deletarMatricula (matricula: ID!): RespostaPadrao!
+    cancelarMatricula (matricula: ID!): RespostaPadrao!
   }
 
 `
