@@ -19,7 +19,7 @@ dataSources.matriculasAPI.cancelarMatricula(matricula),
 
   Matricula: {
     estudante: (parent, _, {dataSources}) => dataSources.usersAPI.getUserById(parent.estudante_id),
-    turma: (parent, _, {dataSources}) => dataSources.turmasAPI.getTurma(parent.turma_id)
+    turma: (parent, _, {dataSources}) => dataSources.turmasAPI.getTurmasCarregadas.load(parent.turma_id)
   }
 }
 
